@@ -19,22 +19,22 @@ function App() {
 
   const touchDown = event => {
     const td = event.target.name;
-
-    if (td === homeTD) {
+      td === homeTD ? setHomeScore (homeScore +7) : setAwayScore (awayScore + 7)
+    /*if (td === homeTD) {
       setHomeScore(homeScore + 7);
     } else {
       setAwayScore(awayScore + 7);
-    }
+    }*/
   };
 
   const fieldGoal = event => {
     const fg = event.target.name;
-
-    if (fg === fieldGoalHome) {
+      fg === fieldGoalAway ? setHomeScore (homeScore + 3) : setAwayScore (awayScore + 3)
+    /*if (fg === fieldGoalHome) {
       setHomeScore(homeScore + 3);
     } else {
       setAwayScore(awayScore + 3);
-    }
+    }*/
   };
 
   return (
